@@ -1,402 +1,142 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Vyshnavi | Data Science & AI Portfolio</title>
-
-  <meta name="description" content="Portfolio of Vyshnavi, a Data Science student exploring machine learning, AI, data analytics and quantum computing.">
+  <title>Aggarapu Naga Vyshnavi | Data Science & AI Portfolio</title>
+  <meta name="description" content="Portfolio of Aggarapu Naga Vyshnavi, a Data Science student exploring machine learning, AI, data analytics and quantum computing.">
   <meta name="theme-color" content="#0b1020">
 
   <style>
-    /* ---------- Global Styles ---------- */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 85px;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 85px; }
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #0b1020;
-      color: #edf2ff;
-      line-height: 1.7;
+      background: #0b1020; color: #edf2ff; line-height: 1.7;
     }
+    a { color: #a9c0ff; text-decoration: none; }
+    a:focus-visible { outline: 2px solid #a9c0ff; outline-offset: 4px; }
+    .container { width: min(1100px, 88%); margin: auto; }
 
-    a {
-      color: #a9c0ff;
-      text-decoration: none;
-    }
-
-    a:focus-visible {
-      outline: 2px solid #a9c0ff;
-      outline-offset: 4px;
-    }
-
-    .container {
-      width: min(1100px, 88%);
-      margin: auto;
-    }
-
-    /* ---------- Header & Navigation ---------- */
     header {
-      padding: 16px 0;
-      background: rgba(17, 24, 43, 0.96);
-      border-bottom: 1px solid #293754;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(12px);
+      padding: 16px 0; background: rgba(17, 24, 43, .96);
+      border-bottom: 1px solid #293754; position: sticky; top: 0;
+      z-index: 100; backdrop-filter: blur(12px);
     }
-
     .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 15px;
     }
+    .logo { font-size: 22px; font-weight: bold; color: #fff; }
+    .logo span { color: #91adff; }
+    nav { display: flex; flex-wrap: wrap; gap: 19px; }
+    nav a { color: #dce5ff; font-size: 14px; }
+    nav a:hover { color: #91adff; }
 
-    .logo {
-      font-size: 23px;
-      font-weight: bold;
-      color: #ffffff;
-      letter-spacing: 0.5px;
-    }
-
-    .logo span {
-      color: #91adff;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 19px;
-    }
-
-    nav a {
-      color: #dce5ff;
-      font-size: 14px;
-      transition: color 0.2s ease;
-    }
-
-    nav a:hover {
-      color: #91adff;
-    }
-
-    /* ---------- Hero Section ---------- */
     .hero {
-      min-height: 560px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      padding: 90px 0;
-      background:
-        radial-gradient(
-          circle at 50% 20%,
-          rgba(76, 103, 190, 0.18),
-          transparent 50%
-        );
+      min-height: 560px; display: flex; align-items: center;
+      text-align: center; padding: 90px 0;
+      background: radial-gradient(circle at 50% 20%, rgba(76,103,190,.18), transparent 50%);
     }
-
     .tag {
-      display: inline-block;
-      color: #b9cbff;
-      background: #19284a;
-      border: 1px solid #34476e;
-      padding: 6px 15px;
-      border-radius: 25px;
-      margin-bottom: 22px;
-      font-size: 14px;
+      display: inline-block; color: #b9cbff; background: #19284a;
+      border: 1px solid #34476e; padding: 6px 15px;
+      border-radius: 25px; margin-bottom: 22px; font-size: 14px;
     }
-
-    h1 {
-      font-size: clamp(38px, 7vw, 68px);
-      line-height: 1.2;
-      margin-bottom: 12px;
-    }
-
-    .accent {
-      color: #91adff;
-    }
-
-    .hero h2 {
-      font-size: clamp(20px, 3vw, 27px);
-      font-weight: 500;
-      color: #dce5ff;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: 22px auto;
-      color: #c2cce1;
-      font-size: 16px;
-    }
-
+    h1 { font-size: clamp(36px, 6vw, 64px); line-height: 1.2; margin-bottom: 12px; }
+    .accent { color: #91adff; }
+    .hero h2 { font-size: clamp(20px, 3vw, 27px); font-weight: 500; color: #dce5ff; }
+    .hero p { max-width: 700px; margin: 22px auto; color: #c2cce1; font-size: 16px; }
     .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 28px;
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 10px; margin-top: 28px;
     }
-
-    /* ---------- Buttons ---------- */
     .btn {
-      display: inline-block;
-      padding: 11px 20px;
-      border-radius: 8px;
-      background: #91adff;
-      color: #091126;
-      font-weight: bold;
-      border: 1px solid #91adff;
-      transition: transform 0.2s ease, background 0.2s ease;
+      display: inline-block; padding: 11px 20px; border-radius: 8px;
+      background: #91adff; color: #091126; font-weight: bold;
+      border: 1px solid #91adff; transition: transform .2s, background .2s;
     }
+    .btn:hover { transform: translateY(-3px); background: #b0c4ff; }
+    .btn.secondary { background: transparent; color: #dce5ff; border-color: #63749c; }
+    .btn.secondary:hover { background: #19284a; }
 
-    .btn:hover {
-      transform: translateY(-3px);
-      background: #b0c4ff;
-    }
+    section { padding: 75px 0; }
+    section:nth-of-type(even) { background: #0f1629; }
+    .section-title { font-size: 32px; margin-bottom: 12px; }
+    .section-subtitle { color: #aebbd4; margin-bottom: 30px; max-width: 750px; }
+    .intro { color: #c2cce1; max-width: 850px; }
 
-    .btn.secondary {
-      background: transparent;
-      color: #dce5ff;
-      border-color: #63749c;
-    }
-
-    .btn.secondary:hover {
-      background: #19284a;
-    }
-
-    /* ---------- General Sections ---------- */
-    section {
-      padding: 75px 0;
-    }
-
-    section:nth-of-type(even) {
-      background: #0f1629;
-    }
-
-    .section-title {
-      font-size: 32px;
-      margin-bottom: 12px;
-    }
-
-    .section-subtitle {
-      color: #aebbd4;
-      margin-bottom: 30px;
-      max-width: 750px;
-    }
-
-    .intro {
-      color: #c2cce1;
-      max-width: 850px;
-    }
-
-    /* ---------- Education ---------- */
     .timeline {
-      margin-top: 28px;
-      padding: 20px 24px;
-      border-left: 3px solid #91adff;
-      background: #151f35;
-      border-radius: 0 12px 12px 0;
+      margin-top: 28px; padding: 20px 24px; border-left: 3px solid #91adff;
+      background: #151f35; border-radius: 0 12px 12px 0;
     }
+    .timeline h3 { color: #dce5ff; margin-bottom: 5px; }
+    .timeline p { color: #c2cce1; }
 
-    .timeline h3 {
-      color: #dce5ff;
-      margin-bottom: 5px;
-    }
-
-    .timeline p {
-      color: #c2cce1;
-    }
-
-    /* ---------- Skills ---------- */
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 11px;
-    }
-
+    .skills { display: flex; flex-wrap: wrap; gap: 11px; }
     .skills span {
-      background: #19284a;
-      border: 1px solid #34476e;
-      color: #dce5ff;
-      padding: 8px 14px;
-      border-radius: 25px;
-      font-size: 14px;
-      transition: background 0.2s ease;
+      background: #19284a; border: 1px solid #34476e; color: #dce5ff;
+      padding: 8px 14px; border-radius: 25px; font-size: 14px;
+      transition: background .2s;
     }
+    .skills span:hover { background: #293c68; }
+    .skill-note { color: #aebbd4; margin-top: 22px; font-size: 14px; }
 
-    .skills span:hover {
-      background: #293c68;
-    }
-
-    .skill-note {
-      color: #aebbd4;
-      margin-top: 22px;
-      font-size: 14px;
-    }
-
-    /* ---------- Project & Certification Cards ---------- */
     .grid {
       display: grid;
-      grid-template-columns: repeat(
-        auto-fit,
-        minmax(min(100%, 245px), 1fr)
-      );
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr));
       gap: 22px;
     }
-
     .card {
-      display: flex;
-      flex-direction: column;
-      background: #151f35;
-      border: 1px solid #293754;
-      padding: 25px;
-      border-radius: 15px;
-      transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease;
+      display: flex; flex-direction: column; background: #151f35;
+      border: 1px solid #293754; padding: 25px; border-radius: 15px;
+      transition: transform .25s, border-color .25s, box-shadow .25s;
     }
-
     .card:hover {
-      transform: translateY(-5px);
-      border-color: #7899ff;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+      transform: translateY(-5px); border-color: #7899ff;
+      box-shadow: 0 12px 30px rgba(0,0,0,.18);
     }
+    .card h3 { color: #dce5ff; font-size: 19px; margin-bottom: 12px; }
+    .card h3 a { color: inherit; }
+    .card h3 a:hover { color: #a9c0ff; text-decoration: underline; }
+    .card p { color: #c2cce1; font-size: 14px; margin-bottom: 16px; }
+    .tech { color: #a9c0ff; font-size: 12px; margin-bottom: 16px; }
+    .card-link { display: inline-block; margin-top: auto; padding-top: 8px; font-weight: bold; font-size: 14px; }
+    .card-link:hover { color: #fff; text-decoration: underline; }
 
-    .card h3 {
-      color: #dce5ff;
-      font-size: 19px;
-      margin-bottom: 12px;
-    }
-
-    .card p {
-      color: #c2cce1;
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-
-    .tech {
-      color: #a9c0ff;
-      font-size: 12px;
-      margin-bottom: 16px;
-    }
-
-    .card-link {
-      display: inline-block;
-      margin-top: auto;
-      padding-top: 8px;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .card-link:hover {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-
-    /* ---------- Contact ---------- */
     .contact-card {
-      background: #151f35;
-      border: 1px solid #293754;
-      border-radius: 15px;
-      padding: 28px;
-      max-width: 800px;
+      background: #151f35; border: 1px solid #293754;
+      border-radius: 15px; padding: 28px; max-width: 800px;
     }
+    .contact-card p { margin-top: 12px; color: #c2cce1; overflow-wrap: anywhere; }
+    .contact-card strong { color: #edf2ff; }
 
-    .contact-card p {
-      margin-top: 12px;
-      color: #c2cce1;
-      overflow-wrap: anywhere;
-    }
-
-    .contact-card strong {
-      color: #edf2ff;
-    }
-
-    /* ---------- Footer ---------- */
     footer {
-      text-align: center;
-      padding: 25px 5%;
-      background: #11182b;
-      border-top: 1px solid #293754;
-      color: #aebbd4;
-      font-size: 13px;
+      text-align: center; padding: 25px 5%; background: #11182b;
+      border-top: 1px solid #293754; color: #aebbd4; font-size: 13px;
     }
-
-    /* ---------- Mobile Responsive Design ---------- */
     @media (max-width: 650px) {
-      .container {
-        width: 90%;
-      }
-
-      .navbar {
-        justify-content: center;
-      }
-
-      nav {
-        justify-content: center;
-        gap: 12px;
-      }
-
-      nav a {
-        font-size: 13px;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 75px 0;
-      }
-
-      section {
-        padding: 55px 0;
-      }
-
-      .section-title {
-        font-size: 27px;
-      }
-
-      .card {
-        padding: 20px;
-      }
-
-      .hero-buttons .btn {
-        width: 100%;
-        max-width: 280px;
-      }
+      .container { width: 90%; }
+      .navbar { justify-content: center; }
+      nav { justify-content: center; gap: 12px; }
+      nav a { font-size: 13px; }
+      .hero { min-height: auto; padding: 75px 0; }
+      section { padding: 55px 0; }
+      .section-title { font-size: 27px; }
+      .card { padding: 20px; }
+      .hero-buttons .btn { width: 100%; max-width: 280px; }
     }
-
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        transition: none !important;
-      }
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- ---------- Navigation ---------- -->
   <header>
     <div class="container navbar">
       <a class="logo" href="#home">Aggarapu Naga Vyshnavi<span>.</span></a>
-
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -408,431 +148,156 @@
   </header>
 
   <main>
-
-    <!-- ---------- Hero ---------- -->
     <section class="hero" id="home">
       <div class="container">
-
-        <span class="tag">
-          Data Science Student · Class of 2027
-        </span>
-
-        <h1>
-          Hi, I'm <span class="accent">Aggarapu Naga Vyshnavi</span>
-        </h1>
-
-        <h2>Aspiring Data Scientist & AI Enthusiast</h2>
-
+        <span class="tag">Data Science Student · Class of 2027</span>
+        <h1>Hi, I'm <span class="accent">Aggarapu Naga Vyshnavi</span></h1>
+        <h2>Aspiring Data Scientist &amp; AI Enthusiast</h2>
         <p>
-          I enjoy analyzing data, building AI-powered applications,developing interactive dashboards and exploring emerging
-          technologies. I am passionate about using data science and
-          artificial intelligence to solve practical problems.
-          
+          I enjoy analyzing data, building AI-powered applications, developing
+          interactive dashboards and exploring emerging technologies. I am
+          passionate about using data science and artificial intelligence to
+          solve practical problems.
         </p>
-
         <div class="hero-buttons">
-          <a class="btn" href="#projects">
-            Explore My Projects
-          </a>
-
-          <a class="btn secondary" href="resume.pdf" download>
-            Download Resume ↓
-          </a>
-
-          <a
-            class="btn secondary"
-            href="https://github.com/vyshnavi-1550"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub Profile ↗
-          </a>
+          <a class="btn" href="#projects">Explore My Projects</a>
+          <a class="btn secondary" href="resume.pdf" download>Download Resume ↓</a>
+          <a class="btn secondary" href="https://github.com/vyshnavi-1550" target="_blank" rel="noopener noreferrer">GitHub Profile ↗</a>
         </div>
-
       </div>
     </section>
 
-    <!-- ---------- About Me ---------- -->
     <section id="about">
       <div class="container">
-
         <h2 class="section-title">About Me</h2>
-
         <p class="intro">
-          I am a B.Tech student specializing in Data Science at
-          Dayananda Sagar University, Bengaluru, graduating in 2027.
-          With a CGPA of 7.58/10 through my sixth semester, I am
-          developing practical skills in data analytics, machine
-          learning, natural language processing and AI applications.
-          I enjoy building projects that turn data into meaningful
-          insights and exploring emerging technologies such as
-          quantum computing.
+          I am a B.Tech student specializing in Data Science at Dayananda Sagar
+          University, Bengaluru, graduating in 2027. With a CGPA of 7.58/10
+          through my sixth semester, I am developing practical skills in data
+          analytics, machine learning, natural language processing and AI
+          applications. I enjoy building projects that turn data into meaningful
+          insights and exploring emerging technologies such as quantum computing.
         </p>
-
         <div class="timeline">
           <h3>B.Tech — Computer Science Engineering (Data Science)</h3>
           <p>Dayananda Sagar University, Bengaluru</p>
           <p>Expected Graduation: 2027</p>
           <p>CGPA: 7.58/10 through Semester 6</p>
         </div>
-
       </div>
     </section>
 
-    <!-- ---------- Technical Skills ---------- -->
     <section id="skills">
       <div class="container">
-
         <h2 class="section-title">Technical Skills</h2>
-
-        <p class="section-subtitle">
-          Technologies and tools I use in my data science,
-          analytics and AI projects.
-        </p>
-
+        <p class="section-subtitle">Technologies and tools I use in my data science, analytics and AI projects.</p>
         <div class="skills">
-          <span>Python</span>
-          <span>SQL</span>
-          <span>Java</span>
-          <span>C</span>
-          <span>Excel</span>
-          <span>Power BI</span>
-          <span>Tableau</span>
-          <span>Pandas</span>
-          <span>NumPy</span>
-          <span>Scikit-learn</span>
-          <span>Machine Learning</span>
-          <span>Natural Language Processing</span>
-          <span>Hugging Face Transformers</span>
-          <span>Matplotlib</span>
-          <span>FastAPI</span>
-          <span>Streamlit</span>
-          <span>LangGraph</span>
-          <span>Git & GitHub</span>
-          <span>Data Visualization</span>
-          <span>Qiskit</span>
+          <span>Python</span><span>SQL</span><span>Java</span><span>C</span>
+          <span>Excel</span><span>Power BI</span><span>Tableau</span>
+          <span>Pandas</span><span>NumPy</span><span>Scikit-learn</span>
+          <span>Machine Learning</span><span>Natural Language Processing</span>
+          <span>Hugging Face Transformers</span><span>Matplotlib</span>
+          <span>FastAPI</span><span>Streamlit</span><span>LangGraph</span>
+          <span>Git &amp; GitHub</span><span>Data Visualization</span><span>Qiskit</span>
         </div>
-
-        <p class="skill-note">
-          Note: Skills listed here reflect tools and technologies
-          I have used or am actively learning.
-        </p>
-
+        <p class="skill-note">Skills listed here reflect tools and technologies I have used or am actively learning.</p>
       </div>
     </section>
 
-    <!-- ---------- Projects ---------- -->
     <section id="projects">
       <div class="container">
-
         <h2 class="section-title">Featured Projects</h2>
-
-        <p class="section-subtitle">
-          Selected projects demonstrating my interests in
-          data science, AI, optimization and business analytics.
-        </p>
-
+        <p class="section-subtitle">Selected projects demonstrating my interests in data science, AI, optimization and business analytics.</p>
         <div class="grid">
-
-          <!-- Project 1 -->
           <article class="card">
             <h3>QEDGE-OPT</h3>
-
-            <p>
-              An edge-resource allocation project comparing
-              classical and quantum-assisted optimization methods
-              for assigning computing tasks to edge servers under
-              cost, latency and resource constraints.
-            </p>
-
-            <div class="tech">
-              Python · Simulated Annealing · Genetic Algorithm ·
-              NSGA-II · QAOA · Qiskit
-            </div>
-
-            <a
-              class="card-link"
-              href="https://github.com/vyshnavi-1550/QEDGE-OPT-Quantum-Assisted-Edge-Resource-Allocation"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Project on GitHub →
-            </a>
+            <p>An edge-resource allocation project comparing classical and quantum-assisted optimization methods for assigning computing tasks to edge servers under cost, latency and resource constraints.</p>
+            <div class="tech">Python · Simulated Annealing · Genetic Algorithm · NSGA-II · QAOA · Qiskit</div>
+            <a class="card-link" href="https://github.com/vyshnavi-1550/QEDGE-OPT-Quantum-Assisted-Edge-Resource-Allocation" target="_blank" rel="noopener noreferrer">View Project on GitHub →</a>
           </article>
 
-          <!-- Project 2 -->
           <article class="card">
             <h3>Emotion Detection with Transformers</h3>
-
-            <p>
-              A multi-label emotion detection project using the
-              GoEmotions dataset. Compared SVM, BERT and RoBERTa
-              models and explored co-occurring emotional patterns
-              through community detection.
-            </p>
-
-            <div class="tech">
-              Python · NLP · BERT · RoBERTa · Scikit-learn
-            </div>
-
-            <a
-              class="card-link"
-              href="https://github.com/vyshnavi-1550/Modeling-Co-Occurring-Emotional-Profiles-Transformer-Based-Emotion-Detection"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Project on GitHub →
-            </a>
+            <p>A multi-label emotion detection project using the GoEmotions dataset. Compared SVM, BERT and RoBERTa models and explored co-occurring emotional patterns through community detection.</p>
+            <div class="tech">Python · NLP · BERT · RoBERTa · Scikit-learn</div>
+            <a class="card-link" href="https://github.com/vyshnavi-1550/Modeling-Co-Occurring-Emotional-Profiles-Transformer-Based-Emotion-Detection" target="_blank" rel="noopener noreferrer">View Project on GitHub →</a>
           </article>
 
-          <!-- Project 3 -->
           <article class="card">
             <h3>OmniBrain</h3>
-
-            <p>
-              An agentic multimodal retrieval-augmented generation
-              application integrating search, SQL and vision
-              workflows, with guardrails and tracing for
-              AI-powered information retrieval.
-            </p>
-
-            <div class="tech">
-              Python · LangGraph · FastAPI · Streamlit · Gemini API
-            </div>
-
-            <a
-              class="card-link"
-              href="https://github.com/vyshnavi-1550/OmniBrain-Agentic-Multi-Modal-RAG-Orchestrator"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Project on GitHub →
-            </a>
+            <p>An agentic multimodal retrieval-augmented generation application integrating search, SQL and vision workflows, with guardrails and tracing for AI-powered information retrieval.</p>
+            <div class="tech">Python · LangGraph · FastAPI · Streamlit · Gemini API</div>
+            <a class="card-link" href="https://github.com/vyshnavi-1550/OmniBrain-Agentic-Multi-Modal-RAG-Orchestrator" target="_blank" rel="noopener noreferrer">View Project on GitHub →</a>
           </article>
 
-          <!-- Project 4 -->
           <article class="card">
             <h3>Customer Churn Dashboard</h3>
-
-            <p>
-              An interactive business analytics dashboard that
-              explores customer churn patterns using data
-              transformation, visualizations and insights to
-              support data-driven decisions.
-            </p>
-
-            <div class="tech">
-              Power BI · Power Query · DAX · Excel
-            </div>
-
-            <a
-              class="card-link"
-              href="https://github.com/vyshnavi-1550/customer-churn-analysis-powerbi"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Project on GitHub →
-            </a>
+            <p>An interactive business analytics dashboard that explores customer churn patterns using data transformation, visualizations and insights to support data-driven decisions.</p>
+            <div class="tech">Power BI · Power Query · DAX · Excel</div>
+            <a class="card-link" href="https://github.com/vyshnavi-1550/customer-churn-analysis-powerbi" target="_blank" rel="noopener noreferrer">View Project on GitHub →</a>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- ---------- Certifications ---------- -->
-  
-<!-- ---------- Certifications ---------- -->
-<section id="certifications">
-  <div class="container">
-
-    <h2 class="section-title">Certifications & Learning</h2>
-
-    <p class="section-subtitle">
-      Professional certifications and courses demonstrating
-      my learning in data science, artificial intelligence,
-      cloud technologies and quantum computing.
-    </p>
-
-    <div class="grid">
-
-      <!-- Oracle Data Science -->
-      <article class="card">
-        <h3>Oracle Data Science Professional</h3>
-        <p>
-          Oracle Cloud Infrastructure 2025 Certified
-          Data Science Professional.
-        </p>
-        <div class="tech">Data Science · Machine Learning · Cloud</div>
-        <a
-          class="card-link"
-          href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=CDAD706221473E1749AD9AD3FA3359D834BB4EA5D948D5362C81C14A7D801F7A"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Verify Certificate ↗
-        </a>
-      </article>
-
-      <!-- Oracle AI Foundations -->
-      <article class="card">
-        <h3>Oracle AI Foundations Associate</h3>
-        <p>
-          Oracle Cloud Infrastructure 2025 Certified
-          AI Foundations Associate.
-        </p>
-        <div class="tech">Artificial Intelligence · AI Fundamentals</div>
-        <a
-          class="card-link"
-          href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=ED0D96C0ADA86B89211F366D0E1B8615F8EF0CCFD50ACBDD54EF4F77CE20EC7F"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Verify Certificate ↗
-        </a>
-      </article>
-
-      <!-- Microsoft Azure -->
-      <article class="card">
-        <h3>Microsoft Azure Data Fundamentals</h3>
-        <p>
-          Microsoft Certified: Azure Data Fundamentals (DP-900).
-        </p>
-        <div class="tech">Data Concepts · Azure Data Services</div>
-        <a
-          class="card-link"
-          href="https://learn.microsoft.com/en-us/users/aggarapunagavyshnavi-5399/credentials/b369cd42372f19f9?ref=https%3A%2F%2Fwww.linkedin.com%2F"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Verify Certificate ↗
-        </a>
-      </article>
-
-      <!-- IBM Quantum -->
-      <article class="card">
-        <h3>IBM Quantum: Using a Quantum Computer</h3>
-        <p>
-          Completed IBM Quantum Learning coursework focused on
-          using a quantum computer and understanding foundational
-          quantum computing concepts.
-        </p>
-        <div class="tech">Quantum Computing · IBM Quantum</div>
-        <a
-          class="card-link"
-          href="https://www.credly.com/badges/a4e0d209-048d-4d08-b86b-bc169cf4f2e9/public_url"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Verified Badge ↗
-        </a>
-      </article>
-
-      <!-- Udemy Snowflake -->
-      <article class="card">
-        <h3>Snowflake for Developers</h3>
-        <p>
-          Udemy course focused on Snowflake and its
-          application in data development workflows.
-        </p>
-        <div class="tech">Snowflake · Data Development</div>
-        <a
-          class="card-link"
-          href="https://ude.my/UC-3ff60e8a-dfb3-4631-9ece-6a416261e5e0"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Course Certificate ↗
-        </a>
-      </article>
-
-    </div>
-
-  </div>
-</section>
-
-
-          <!-- Deloitte -->
+    <section id="certifications">
+      <div class="container">
+        <h2 class="section-title">Certifications &amp; Learning</h2>
+        <p class="section-subtitle">Click a certification title or its verification link to view the credential.</p>
+        <div class="grid">
           <article class="card">
-            <h3>Deloitte Data Analytics Job Simulation</h3>
-
-            <p>
-              Completed a job simulation focused on data analytics
-              and practical business problem-solving activities.
-            </p>
-
-            <p class="tech">
-              Data Analytics · Business Insights
-            </p>
+            <h3><a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=CDAD706221473E1749AD9AD3FA3359D834BB4EA5D948D5362C81C14A7D801F7A" target="_blank" rel="noopener noreferrer">Oracle Cloud Infrastructure 2025 Certified Data Science Professional ↗</a></h3>
+            <p>Oracle Cloud Infrastructure certification in data science.</p>
+            <div class="tech">Data Science · Machine Learning · Cloud</div>
+            <a class="card-link" href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=CDAD706221473E1749AD9AD3FA3359D834BB4EA5D948D5362C81C14A7D801F7A" target="_blank" rel="noopener noreferrer">View Certificate ↗</a>
           </article>
 
+          <article class="card">
+            <h3><a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=ED0D96C0ADA86B89211F366D0E1B8615F8EF0CCFD50ACBDD54EF4F77CE20EC7F" target="_blank" rel="noopener noreferrer">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate ↗</a></h3>
+            <p>Oracle Cloud Infrastructure certification in AI foundations.</p>
+            <div class="tech">Artificial Intelligence · AI Fundamentals</div>
+            <a class="card-link" href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=ED0D96C0ADA86B89211F366D0E1B8615F8EF0CCFD50ACBDD54EF4F77CE20EC7F" target="_blank" rel="noopener noreferrer">View Certificate ↗</a>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://learn.microsoft.com/en-us/users/aggarapunagavyshnavi-5399/credentials/b369cd42372f19f9?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" rel="noopener noreferrer">Microsoft Certified: Azure Data Fundamentals (DP-900) ↗</a></h3>
+            <p>Microsoft certification covering foundational data concepts and Azure data services.</p>
+            <div class="tech">Data Concepts · Azure Data Services</div>
+            <a class="card-link" href="https://learn.microsoft.com/en-us/users/aggarapunagavyshnavi-5399/credentials/b369cd42372f19f9?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" rel="noopener noreferrer">View Certificate ↗</a>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://www.credly.com/badges/a4e0d209-048d-4d08-b86b-bc169cf4f2e9/public_url" target="_blank" rel="noopener noreferrer">IBM Quantum: Using a Quantum Computer (2026) ↗</a></h3>
+            <p>IBM Quantum Learning credential focused on using a quantum computer and foundational quantum computing concepts.</p>
+            <div class="tech">Quantum Computing · IBM Quantum</div>
+            <a class="card-link" href="https://www.credly.com/badges/a4e0d209-048d-4d08-b86b-bc169cf4f2e9/public_url" target="_blank" rel="noopener noreferrer">View Verified Badge ↗</a>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://ude.my/UC-3ff60e8a-dfb3-4631-9ece-6a416261e5e0" target="_blank" rel="noopener noreferrer">Udemy — Snowflake for Developers ↗</a></h3>
+            <p>Course covering Snowflake and its application in data development workflows.</p>
+            <div class="tech">Snowflake · Data Development</div>
+            <a class="card-link" href="https://ude.my/UC-3ff60e8a-dfb3-4631-9ece-6a416261e5e0" target="_blank" rel="noopener noreferrer">View Course Certificate ↗</a>
+          </article>
         </div>
-
-        <p class="skill-note">
-          Only list certifications and simulations you have completed.
-          Add credential links to individual cards when available.
-        </p>
-
       </div>
     </section>
 
-    <!-- ---------- Contact ---------- -->
     <section id="contact">
       <div class="container">
-
         <h2 class="section-title">Let's Connect</h2>
-
-        <p class="section-subtitle">
-          I am interested in data science and AI internships,
-          collaborative projects, and opportunities to learn
-          and grow professionally.
-        </p>
-
+        <p class="section-subtitle">I am interested in data science and AI internships, collaborative projects, and opportunities to learn and grow professionally.</p>
         <div class="contact-card">
-
-          <p>
-            <strong>Email:</strong>
-            <a href="mailto:nagavyshnaviaggarapu05@gmail.com">
-              nagavyshnaviaggarapu05@gmail.com
-            </a>
-          </p>
-
-          <p>
-            <strong>GitHub:</strong>
-            <a
-              href="https://github.com/vyshnavi-1550"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              github.com/vyshnavi-1550
-            </a>
-          </p>
-
-         
-<p>
-  <strong>LinkedIn:</strong>
-  <a
-    href="https://www.linkedin.com/in/aggarapu-naga-vyshnavi"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    View my LinkedIn Profile ↗
-  </a>
-</p>
-
-
+          <p><strong>Email:</strong> <a href="mailto:nagavyshnaviaggarapu05@gmail.com">nagavyshnaviaggarapu05@gmail.com</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/vyshnavi-1550" target="_blank" rel="noopener noreferrer">github.com/vyshnavi-1550</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/aggarapu-naga-vyshnavi" target="_blank" rel="noopener noreferrer">View my LinkedIn Profile ↗</a></p>
         </div>
-
       </div>
     </section>
-
   </main>
 
-  <!-- ---------- Footer ---------- -->
   <footer>
-    <p>
-      © 2026 Vyshnavi · Built with HTML & CSS · Hosted on GitHub Pages
-    </p>
+    <p>© 2026 Vyshnavi · Built with HTML &amp; CSS · Hosted on GitHub Pages</p>
   </footer>
-
 </body>
 </html>
