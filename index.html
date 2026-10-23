@@ -4,217 +4,795 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vyshnavi | Data Science Portfolio</title>
-  <meta name="description" content="Portfolio of a Data Science student exploring AI, machine learning and analytics.">
+
+  <title>Vyshnavi | Data Science & AI Portfolio</title>
+
+  <meta name="description" content="Portfolio of Vyshnavi, a Data Science student exploring machine learning, AI, data analytics and quantum computing.">
+  <meta name="theme-color" content="#0b1020">
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    /* ---------- Global Styles ---------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: #0b1020;
       color: #edf2ff;
       line-height: 1.7;
     }
-    a { color: #8bafff; text-decoration: none; }
+
+    a {
+      color: #a9c0ff;
+      text-decoration: none;
+    }
+
+    a:focus-visible {
+      outline: 2px solid #a9c0ff;
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(1100px, 88%);
+      margin: auto;
+    }
+
+    /* ---------- Header & Navigation ---------- */
     header {
-      padding: 18px 8%;
+      padding: 16px 0;
+      background: rgba(17, 24, 43, 0.96);
+      border-bottom: 1px solid #293754;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
-      background: #11182b;
-      position: sticky;
-      top: 0;
+      gap: 15px;
     }
-    .logo { font-weight: bold; font-size: 20px; color: white; }
-    nav { display: flex; flex-wrap: wrap; gap: 16px; }
-    nav a { color: #dce5ff; font-size: 14px; }
-    .hero { padding: 90px 8% 75px; text-align: center; }
+
+    .logo {
+      font-size: 23px;
+      font-weight: bold;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: #91adff;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 19px;
+    }
+
+    nav a {
+      color: #dce5ff;
+      font-size: 14px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #91adff;
+    }
+
+    /* ---------- Hero Section ---------- */
+    .hero {
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 90px 0;
+      background:
+        radial-gradient(
+          circle at 50% 20%,
+          rgba(76, 103, 190, 0.18),
+          transparent 50%
+        );
+    }
+
     .tag {
-      color: #a9c0ff;
-      background: #19284a;
       display: inline-block;
-      padding: 6px 14px;
-      border-radius: 20px;
-      margin-bottom: 20px;
+      color: #b9cbff;
+      background: #19284a;
+      border: 1px solid #34476e;
+      padding: 6px 15px;
+      border-radius: 25px;
+      margin-bottom: 22px;
+      font-size: 14px;
     }
-    h1 { font-size: clamp(34px, 6vw, 58px); line-height: 1.2; }
-    .accent { color: #91adff; }
-    .hero p { max-width: 680px; margin: 20px auto; color: #c2cce1; }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 68px);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .accent {
+      color: #91adff;
+    }
+
+    .hero h2 {
+      font-size: clamp(20px, 3vw, 27px);
+      font-weight: 500;
+      color: #dce5ff;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 22px auto;
+      color: #c2cce1;
+      font-size: 16px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    /* ---------- Buttons ---------- */
     .btn {
       display: inline-block;
       padding: 11px 20px;
       border-radius: 8px;
-      background: #7899ff;
+      background: #91adff;
       color: #091126;
       font-weight: bold;
-      margin: 8px;
+      border: 1px solid #91adff;
+      transition: transform 0.2s ease, background 0.2s ease;
     }
-    .btn.secondary { background: transparent; color: #dce5ff; border: 1px solid #63749c; }
-    section { padding: 55px 8%; }
-    section:nth-of-type(even) { background: #0f1629; }
-    h2 { font-size: 29px; margin-bottom: 22px; }
-    .intro { color: #c2cce1; max-width: 800px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #b0c4ff;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: #dce5ff;
+      border-color: #63749c;
+    }
+
+    .btn.secondary:hover {
+      background: #19284a;
+    }
+
+    /* ---------- General Sections ---------- */
+    section {
+      padding: 75px 0;
+    }
+
+    section:nth-of-type(even) {
+      background: #0f1629;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      color: #aebbd4;
+      margin-bottom: 30px;
+      max-width: 750px;
+    }
+
+    .intro {
+      color: #c2cce1;
+      max-width: 850px;
+    }
+
+    /* ---------- Education ---------- */
+    .timeline {
+      margin-top: 28px;
+      padding: 20px 24px;
+      border-left: 3px solid #91adff;
+      background: #151f35;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .timeline h3 {
+      color: #dce5ff;
+      margin-bottom: 5px;
+    }
+
+    .timeline p {
+      color: #c2cce1;
+    }
+
+    /* ---------- Skills ---------- */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+    }
+
+    .skills span {
+      background: #19284a;
+      border: 1px solid #34476e;
+      color: #dce5ff;
+      padding: 8px 14px;
+      border-radius: 25px;
+      font-size: 14px;
+      transition: background 0.2s ease;
+    }
+
+    .skills span:hover {
+      background: #293c68;
+    }
+
+    .skill-note {
+      color: #aebbd4;
+      margin-top: 22px;
+      font-size: 14px;
+    }
+
+    /* ---------- Project & Certification Cards ---------- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 245px), 1fr)
+      );
+      gap: 22px;
+    }
+
     .card {
+      display: flex;
+      flex-direction: column;
       background: #151f35;
       border: 1px solid #293754;
-      padding: 22px;
-      border-radius: 14px;
+      padding: 25px;
+      border-radius: 15px;
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
     }
-    .card h3 { margin-bottom: 9px; color: #dce5ff; }
-    .card p { color: #c2cce1; font-size: 14px; }
-    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
-    .skills span {
-      background: #19284a; border: 1px solid #34476e;
-      padding: 7px 13px; border-radius: 20px; font-size: 14px;
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #7899ff;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
     }
-    .timeline { border-left: 2px solid #7899ff; padding-left: 22px; }
-    .timeline p { color: #c2cce1; }
-    footer { text-align: center; padding: 28px; background: #11182b; color: #b9c5dc; }
-    @media (max-width: 600px) {
-      header { padding: 16px 5%; }
-      nav { gap: 10px; }
-      section, .hero { padding-left: 5%; padding-right: 5%; }
+
+    .card h3 {
+      color: #dce5ff;
+      font-size: 19px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #c2cce1;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .tech {
+      color: #a9c0ff;
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
+
+    .card-link {
+      display: inline-block;
+      margin-top: auto;
+      padding-top: 8px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .card-link:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact-card {
+      background: #151f35;
+      border: 1px solid #293754;
+      border-radius: 15px;
+      padding: 28px;
+      max-width: 800px;
+    }
+
+    .contact-card p {
+      margin-top: 12px;
+      color: #c2cce1;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-card strong {
+      color: #edf2ff;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      padding: 25px 5%;
+      background: #11182b;
+      border-top: 1px solid #293754;
+      color: #aebbd4;
+      font-size: 13px;
+    }
+
+    /* ---------- Mobile Responsive Design ---------- */
+    @media (max-width: 650px) {
+      .container {
+        width: 90%;
+      }
+
+      .navbar {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 75px 0;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .section-title {
+        font-size: 27px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
     }
   </style>
 </head>
+
 <body>
+
+  <!-- ---------- Navigation ---------- -->
   <header>
-    <a class="logo" href="#home">Vyshnavi.</a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#learning">Learning</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="container navbar">
+      <a class="logo" href="#home">Vyshnavi<span>.</span></a>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
+
+    <!-- ---------- Hero ---------- -->
     <section class="hero" id="home">
-      <span class="tag">Data Science Student · Class of 2027</span>
-      <h1>Hi, I'm <span class="accent">Vyshnavi</span></h1>
-      <h2 style="font-size:24px; margin-top:12px;">Aspiring Data Scientist & AI Enthusiast</h2>
-      <p>
-        I enjoy working with data, building AI-powered applications,
-        creating dashboards, and exploring how technology can solve
-        real-world problems. I am currently expanding my skills in
-        machine learning and quantum computing.
-      </p>
-      <a class="btn" href="#projects">Explore My Projects</a>
-      <a class="btn secondary" href="#contact">Contact Me</a>
+      <div class="container">
+
+        <span class="tag">
+          Data Science Student · Class of 2027
+        </span>
+
+        <h1>
+          Hi, I'm <span class="accent">Vyshnavi</span>
+        </h1>
+
+        <h2>Aspiring Data Scientist & AI Enthusiast</h2>
+
+        <p>
+          I enjoy analyzing data, building AI-powered applications,
+          developing interactive dashboards and exploring emerging
+          technologies. I am passionate about using data science and
+          artificial intelligence to solve practical problems.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn" href="#projects">
+            Explore My Projects
+          </a>
+
+          <a class="btn secondary" href="resume.pdf" download>
+            Download Resume ↓
+          </a>
+
+          <a
+            class="btn secondary"
+            href="https://github.com/vyshnavi-1550"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub Profile ↗
+          </a>
+        </div>
+
+      </div>
     </section>
 
+    <!-- ---------- About Me ---------- -->
     <section id="about">
-      <h2>About Me</h2>
-      <p class="intro">
-        I am a B.Tech student specializing in Data Science at
-        Dayananda Sagar University, Bengaluru. I am interested in
-        data analytics, machine learning, natural language processing,
-        and AI applications. I am building practical projects and
-        looking for opportunities to learn, collaborate, and grow.
-      </p>
-      <br>
-      <div class="timeline">
-        <h3>B.Tech — Data Science</h3>
-        <p>Dayananda Sagar University, Bengaluru · Expected 2027</p>
+      <div class="container">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p class="intro">
+          I am a B.Tech student specializing in Data Science at
+          Dayananda Sagar University, Bengaluru, graduating in 2027.
+          With a CGPA of 7.58/10 through my sixth semester, I am
+          developing practical skills in data analytics, machine
+          learning, natural language processing and AI applications.
+          I enjoy building projects that turn data into meaningful
+          insights and exploring emerging technologies such as
+          quantum computing.
+        </p>
+
+        <div class="timeline">
+          <h3>B.Tech — Computer Science Engineering (Data Science)</h3>
+          <p>Dayananda Sagar University, Bengaluru</p>
+          <p>Expected Graduation: 2027</p>
+          <p>CGPA: 7.58/10 through Semester 6</p>
+        </div>
+
       </div>
     </section>
 
+    <!-- ---------- Technical Skills ---------- -->
     <section id="skills">
-      <h2>Technical Skills</h2>
-      <div class="skills">
-        <span>Python</span><span>SQL</span><span>Excel</span>
-        <span>Power BI</span><span>Tableau</span><span>Pandas</span>
-        <span>NumPy</span><span>Machine Learning</span>
-        <span>NLP</span><span>Hugging Face Transformers</span>
-        <span>FastAPI</span><span>Streamlit</span>
-        <span>Git & GitHub</span><span>Data Visualization</span>
+      <div class="container">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <p class="section-subtitle">
+          Technologies and tools I use in my data science,
+          analytics and AI projects.
+        </p>
+
+        <div class="skills">
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Java</span>
+          <span>C</span>
+          <span>Excel</span>
+          <span>Power BI</span>
+          <span>Tableau</span>
+          <span>Pandas</span>
+          <span>NumPy</span>
+          <span>Scikit-learn</span>
+          <span>Machine Learning</span>
+          <span>Natural Language Processing</span>
+          <span>Hugging Face Transformers</span>
+          <span>Matplotlib</span>
+          <span>FastAPI</span>
+          <span>Streamlit</span>
+          <span>LangGraph</span>
+          <span>Git & GitHub</span>
+          <span>Data Visualization</span>
+          <span>Qiskit</span>
+        </div>
+
+        <p class="skill-note">
+          Note: Skills listed here reflect tools and technologies
+          I have used or am actively learning.
+        </p>
+
       </div>
-      <p class="intro" style="margin-top:15px;">
-        I am currently learning quantum computing and Qiskit.
-      </p>
     </section>
 
+    <!-- ---------- Projects ---------- -->
     <section id="projects">
-      <h2>Featured Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>QEDGE-OPT</h3>
-          <p>
-            A study of classical and quantum-assisted optimization
-            methods for allocating computing tasks to edge servers
-            under cost, latency, and energy constraints.
-          </p>
-          <a href="https://github.com/vyshnavi-1550/QEDGE-OPT-Quantum-Assisted-Edge-Resource-Allocation" target="_blank" rel="noopener noreferrer">View project →</a>
-        </article>
-        <article class="card">
-          <h3>Emotion Detection</h3>
-          <p>
-            Transformer-based emotion detection using the GoEmotions
-            dataset, with analysis of co-occurring emotional profiles.
-          </p>
-          <a href="https://github.com/vyshnavi-1550/Modeling-Co-Occurring-Emotional-Profiles-Transformer-Based-Emotion-Detection" target="_blank" rel="noopener noreferrer">View project →</a>
-        </article>
-        <article class="card">
-          <h3>OmniBrain</h3>
-          <p>
-            An AI project exploring multi-agent workflows and
-            multimodal retrieval-augmented generation.
-          </p>
-          <a href="https://github.com/vyshnavi-1550/OmniBrain-Agentic-Multi-Modal-RAG-Orchestrator" target="_blank" rel="noopener noreferrer">View project →</a>
-        </article>
-        <article class="card">
-          <h3>Customer Churn Dashboard</h3>
-          <p>
-            A business analytics project focused on exploring customer
-            churn data and presenting insights through visualizations.
-          </p>
-          <a href="https://github.com/vyshnavi-1550/customer-churn-analysis-powerbi" target="_blank" rel="noopener noreferrer">View project →</a>
-        </article>
+      <div class="container">
+
+        <h2 class="section-title">Featured Projects</h2>
+
+        <p class="section-subtitle">
+          Selected projects demonstrating my interests in
+          data science, AI, optimization and business analytics.
+        </p>
+
+        <div class="grid">
+
+          <!-- Project 1 -->
+          <article class="card">
+            <h3>QEDGE-OPT</h3>
+
+            <p>
+              An edge-resource allocation project comparing
+              classical and quantum-assisted optimization methods
+              for assigning computing tasks to edge servers under
+              cost, latency and resource constraints.
+            </p>
+
+            <div class="tech">
+              Python · Simulated Annealing · Genetic Algorithm ·
+              NSGA-II · QAOA · Qiskit
+            </div>
+
+            <a
+              class="card-link"
+              href="https://github.com/vyshnavi-1550/QEDGE-OPT-Quantum-Assisted-Edge-Resource-Allocation"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Project on GitHub →
+            </a>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card">
+            <h3>Emotion Detection with Transformers</h3>
+
+            <p>
+              A multi-label emotion detection project using the
+              GoEmotions dataset. Compared SVM, BERT and RoBERTa
+              models and explored co-occurring emotional patterns
+              through community detection.
+            </p>
+
+            <div class="tech">
+              Python · NLP · BERT · RoBERTa · Scikit-learn
+            </div>
+
+            <a
+              class="card-link"
+              href="https://github.com/vyshnavi-1550/Modeling-Co-Occurring-Emotional-Profiles-Transformer-Based-Emotion-Detection"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Project on GitHub →
+            </a>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card">
+            <h3>OmniBrain</h3>
+
+            <p>
+              An agentic multimodal retrieval-augmented generation
+              application integrating search, SQL and vision
+              workflows, with guardrails and tracing for
+              AI-powered information retrieval.
+            </p>
+
+            <div class="tech">
+              Python · LangGraph · FastAPI · Streamlit · Gemini API
+            </div>
+
+            <a
+              class="card-link"
+              href="https://github.com/vyshnavi-1550/OmniBrain-Agentic-Multi-Modal-RAG-Orchestrator"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Project on GitHub →
+            </a>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="card">
+            <h3>Customer Churn Dashboard</h3>
+
+            <p>
+              An interactive business analytics dashboard that
+              explores customer churn patterns using data
+              transformation, visualizations and insights to
+              support data-driven decisions.
+            </p>
+
+            <div class="tech">
+              Power BI · Power Query · DAX · Excel
+            </div>
+
+            <a
+              class="card-link"
+              href="https://github.com/vyshnavi-1550/customer-churn-analysis-powerbi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Project on GitHub →
+            </a>
+          </article>
+
+        </div>
       </div>
     </section>
 
-    <section id="learning">
-      <h2>Certifications & Learning</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Quantum Computing</h3>
-          <p>Learning quantum circuits, qubits, quantum gates and Qiskit through IBM Quantum Learning.</p>
-        </article>
-        <article class="card">
-          <h3>Continuous Learning</h3>
-          <p>Developing practical skills in data science, AI, analytics and software development.</p>
-        </article>
+    <!-- ---------- Certifications ---------- -->
+    <section id="certifications">
+      <div class="container">
+
+        <h2 class="section-title">Certifications & Learning</h2>
+
+        <p class="section-subtitle">
+          Certifications and learning activities that support
+          my development in data science, AI and emerging technology.
+        </p>
+
+        <div class="grid">
+
+          <!-- IBM Quantum Badge -->
+          <article class="card">
+            <h3>IBM Quantum — Using a Quantum Computer</h3>
+
+            <p>
+              Completed IBM Quantum Learning coursework focused on
+              using a quantum computer and learning foundational
+              quantum computing concepts.
+            </p>
+
+            <a
+              class="card-link"
+              href="https://www.credly.com/badges/a4e0d209-048d-4d08-b86b-bc169cf4f2e9/public_url"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Credly Badge →
+            </a>
+          </article>
+
+          <!-- Data Science Certification -->
+          <article class="card">
+            <h3>Oracle Data Science Professional</h3>
+
+            <p>
+              Oracle Cloud Infrastructure 2025 Certified
+              Data Science Professional.
+            </p>
+
+            <p class="tech">
+              Data Science · Machine Learning · Cloud
+            </p>
+          </article>
+
+          <!-- AI Certification -->
+          <article class="card">
+            <h3>Oracle AI Foundations Associate</h3>
+
+            <p>
+              Oracle Cloud Infrastructure 2025 Certified
+              AI Foundations Associate.
+            </p>
+
+            <p class="tech">
+              Artificial Intelligence · AI Fundamentals
+            </p>
+          </article>
+
+          <!-- Microsoft Certification -->
+          <article class="card">
+            <h3>Microsoft Azure Data Fundamentals</h3>
+
+            <p>
+              Microsoft Certified: Azure Data Fundamentals (DP-900).
+            </p>
+
+            <p class="tech">
+              Data Concepts · Azure Data Services
+            </p>
+          </article>
+
+          <!-- Deloitte -->
+          <article class="card">
+            <h3>Deloitte Data Analytics Job Simulation</h3>
+
+            <p>
+              Completed a job simulation focused on data analytics
+              and practical business problem-solving activities.
+            </p>
+
+            <p class="tech">
+              Data Analytics · Business Insights
+            </p>
+          </article>
+
+        </div>
+
+        <p class="skill-note">
+          Only list certifications and simulations you have completed.
+          Add credential links to individual cards when available.
+        </p>
+
       </div>
-      <p class="intro" style="margin-top:15px;">
-        I will add verified certificates and badges here as I earn them.
-      </p>
     </section>
 
+    <!-- ---------- Contact ---------- -->
     <section id="contact">
-      <h2>Let's Connect</h2>
-      <p class="intro">
-        I am interested in internships, learning opportunities,
-        collaborative projects, and connecting with people in data
-        science and AI.
-      </p>
-      <p style="margin-top:15px;">
-        GitHub:
-        <a href="https://github.com/vyshnavi-1550" target="_blank" rel="noopener noreferrer">github.com/vyshnavi-1550</a>
-      </p>
-      <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">Add your LinkedIn profile link</a>
-      </p>
-      <p style="margin-top:8px;">Email: Add your professional email address</p>
+      <div class="container">
+
+        <h2 class="section-title">Let's Connect</h2>
+
+        <p class="section-subtitle">
+          I am interested in data science and AI internships,
+          collaborative projects, and opportunities to learn
+          and grow professionally.
+        </p>
+
+        <div class="contact-card">
+
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:nagavyshnaviaggarapu05@gmail.com">
+              nagavyshnaviaggarapu05@gmail.com
+            </a>
+          </p>
+
+          <p>
+            <strong>GitHub:</strong>
+            <a
+              href="https://github.com/vyshnavi-1550"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github.com/vyshnavi-1550
+            </a>
+          </p>
+
+          <p>
+            <strong>LinkedIn:</strong>
+            <a
+              href="YOUR_LINKEDIN_PROFILE_URL"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Connect with me on LinkedIn
+            </a>
+          </p>
+
+        </div>
+
+      </div>
     </section>
+
   </main>
 
+  <!-- ---------- Footer ---------- -->
   <footer>
-    <p>© 2026 Vyshnavi · Built with HTML and CSS · Hosted on GitHub Pages</p>
+    <p>
+      © 2026 Vyshnavi · Built with HTML & CSS · Hosted on GitHub Pages
+    </p>
   </footer>
+
 </body>
 </html>
