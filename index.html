@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vyshnavi | Data Science Portfolio</title>
+  <meta name="description" content="Portfolio of a Data Science student exploring AI, machine learning and analytics.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: #edf2ff;
+      line-height: 1.7;
+    }
+    a { color: #8bafff; text-decoration: none; }
+    header {
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: #11182b;
+      position: sticky;
+      top: 0;
+    }
+    .logo { font-weight: bold; font-size: 20px; color: white; }
+    nav { display: flex; flex-wrap: wrap; gap: 16px; }
+    nav a { color: #dce5ff; font-size: 14px; }
+    .hero { padding: 90px 8% 75px; text-align: center; }
+    .tag {
+      color: #a9c0ff;
+      background: #19284a;
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    h1 { font-size: clamp(34px, 6vw, 58px); line-height: 1.2; }
+    .accent { color: #91adff; }
+    .hero p { max-width: 680px; margin: 20px auto; color: #c2cce1; }
+    .btn {
+      display: inline-block;
+      padding: 11px 20px;
+      border-radius: 8px;
+      background: #7899ff;
+      color: #091126;
+      font-weight: bold;
+      margin: 8px;
+    }
+    .btn.secondary { background: transparent; color: #dce5ff; border: 1px solid #63749c; }
+    section { padding: 55px 8%; }
+    section:nth-of-type(even) { background: #0f1629; }
+    h2 { font-size: 29px; margin-bottom: 22px; }
+    .intro { color: #c2cce1; max-width: 800px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+    .card {
+      background: #151f35;
+      border: 1px solid #293754;
+      padding: 22px;
+      border-radius: 14px;
+    }
+    .card h3 { margin-bottom: 9px; color: #dce5ff; }
+    .card p { color: #c2cce1; font-size: 14px; }
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skills span {
+      background: #19284a; border: 1px solid #34476e;
+      padding: 7px 13px; border-radius: 20px; font-size: 14px;
+    }
+    .timeline { border-left: 2px solid #7899ff; padding-left: 22px; }
+    .timeline p { color: #c2cce1; }
+    footer { text-align: center; padding: 28px; background: #11182b; color: #b9c5dc; }
+    @media (max-width: 600px) {
+      header { padding: 16px 5%; }
+      nav { gap: 10px; }
+      section, .hero { padding-left: 5%; padding-right: 5%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="#home">Vyshnavi.</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#learning">Learning</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <span class="tag">Data Science Student · Class of 2027</span>
+      <h1>Hi, I'm <span class="accent">Vyshnavi</span></h1>
+      <h2 style="font-size:24px; margin-top:12px;">Aspiring Data Scientist & AI Enthusiast</h2>
+      <p>
+        I enjoy working with data, building AI-powered applications,
+        creating dashboards, and exploring how technology can solve
+        real-world problems. I am currently expanding my skills in
+        machine learning and quantum computing.
+      </p>
+      <a class="btn" href="#projects">Explore My Projects</a>
+      <a class="btn secondary" href="#contact">Contact Me</a>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p class="intro">
+        I am a B.Tech student specializing in Data Science at
+        Dayananda Sagar University, Bengaluru. I am interested in
+        data analytics, machine learning, natural language processing,
+        and AI applications. I am building practical projects and
+        looking for opportunities to learn, collaborate, and grow.
+      </p>
+      <br>
+      <div class="timeline">
+        <h3>B.Tech — Data Science</h3>
+        <p>Dayananda Sagar University, Bengaluru · Expected 2027</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="skills">
+        <span>Python</span><span>SQL</span><span>Excel</span>
+        <span>Power BI</span><span>Tableau</span><span>Pandas</span>
+        <span>NumPy</span><span>Machine Learning</span>
+        <span>NLP</span><span>Hugging Face Transformers</span>
+        <span>FastAPI</span><span>Streamlit</span>
+        <span>Git & GitHub</span><span>Data Visualization</span>
+      </div>
+      <p class="intro" style="margin-top:15px;">
+        I am currently learning quantum computing and Qiskit.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>QEDGE-OPT</h3>
+          <p>
+            A study of classical and quantum-assisted optimization
+            methods for allocating computing tasks to edge servers
+            under cost, latency, and energy constraints.
+          </p>
+          <a href="https://github.com/vyshnavi-1550/QEDGE-OPT-Quantum-Assisted-Edge-Resource-Allocation" target="_blank" rel="noopener noreferrer">View project →</a>
+        </article>
+        <article class="card">
+          <h3>Emotion Detection</h3>
+          <p>
+            Transformer-based emotion detection using the GoEmotions
+            dataset, with analysis of co-occurring emotional profiles.
+          </p>
+          <a href="https://github.com/vyshnavi-1550/Modeling-Co-Occurring-Emotional-Profiles-Transformer-Based-Emotion-Detection" target="_blank" rel="noopener noreferrer">View project →</a>
+        </article>
+        <article class="card">
+          <h3>OmniBrain</h3>
+          <p>
+            An AI project exploring multi-agent workflows and
+            multimodal retrieval-augmented generation.
+          </p>
+          <a href="https://github.com/vyshnavi-1550/OmniBrain-Agentic-Multi-Modal-RAG-Orchestrator" target="_blank" rel="noopener noreferrer">View project →</a>
+        </article>
+        <article class="card">
+          <h3>Customer Churn Dashboard</h3>
+          <p>
+            A business analytics project focused on exploring customer
+            churn data and presenting insights through visualizations.
+          </p>
+          <a href="https://github.com/vyshnavi-1550/customer-churn-analysis-powerbi" target="_blank" rel="noopener noreferrer">View project →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="learning">
+      <h2>Certifications & Learning</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Quantum Computing</h3>
+          <p>Learning quantum circuits, qubits, quantum gates and Qiskit through IBM Quantum Learning.</p>
+        </article>
+        <article class="card">
+          <h3>Continuous Learning</h3>
+          <p>Developing practical skills in data science, AI, analytics and software development.</p>
+        </article>
+      </div>
+      <p class="intro" style="margin-top:15px;">
+        I will add verified certificates and badges here as I earn them.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Let's Connect</h2>
+      <p class="intro">
+        I am interested in internships, learning opportunities,
+        collaborative projects, and connecting with people in data
+        science and AI.
+      </p>
+      <p style="margin-top:15px;">
+        GitHub:
+        <a href="https://github.com/vyshnavi-1550" target="_blank" rel="noopener noreferrer">github.com/vyshnavi-1550</a>
+      </p>
+      <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">Add your LinkedIn profile link</a>
+      </p>
+      <p style="margin-top:8px;">Email: Add your professional email address</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Vyshnavi · Built with HTML and CSS · Hosted on GitHub Pages</p>
+  </footer>
+</body>
+</html>
